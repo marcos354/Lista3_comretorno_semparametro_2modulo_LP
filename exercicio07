@@ -1,7 +1,6 @@
 def vetores():
   vetorA = []
   vetorB = []
-  fatorial = 1
   for i in range(5):
     vetorA.append(int(input('Informe um número: ')))
     for n in range(vetorA[i],1,-1):
