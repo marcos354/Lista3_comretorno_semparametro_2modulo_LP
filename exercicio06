@@ -1,0 +1,11 @@
+def par():
+  num = int(input("Digite um número: "))
+  n = (num%2)
+  if n == 0:
+    return True
+  else:
+    return False
+def main():
+  p = par()
+  print("O número é par: ",p)
+main()
