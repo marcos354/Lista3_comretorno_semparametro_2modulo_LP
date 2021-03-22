@@ -1,0 +1,8 @@
+def quadrado():
+  lado = int(input("Digite a medida do lado do quadrado: "))
+  A = lado ** 2
+  return A
+def main():
+  a = quadrado()
+  print('A área do quadrado é: ',a)
+main()
