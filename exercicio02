@@ -1,0 +1,9 @@
+def subtrair():
+  a = int(input("Digite o primeiro número: "))
+  b = int(input("Digite o segundo número: "))
+  r = a - b
+  return r
+def main():
+  s = subtrair()
+  print("O resultado da subtração é: ",s)
+main()
