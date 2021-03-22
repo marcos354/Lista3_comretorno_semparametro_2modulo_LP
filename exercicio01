@@ -1,0 +1,9 @@
+def multiplicar():
+    n = int(input('Informe um valor...:'))
+    r = n * 2
+    return r
+def main():
+    m = multiplicar()
+    print('O resultado é',m)
+
+main()
