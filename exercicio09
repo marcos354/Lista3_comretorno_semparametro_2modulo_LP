@@ -1,0 +1,45 @@
+idade = []
+sexo = []
+olhos = []
+cabelo = []
+
+def caracteristica():
+  opcao = input("Deseja cadas outro (s/n)? ")
+  while opcao == 's':
+    idade.append(int(input("Digite a idade: ")))
+    sexo.append(str(input("Qual o sexo M/F: ")))
+    olhos.append(str(input("Qual a cor dos olhos A - azuis / C - castanhos: ")))
+    cabelo.append(str(input("Qual a cor dos cabelos L - louros; P - pretos; C - castanhos: ")))
+    opcao = input('Deseja cadastrar outro (s/n)? ')
+  
+def media():  
+    cont = 0
+    soma_idade = 0
+    for i in range(len(idade)):
+      if olhos[i] == 'c' or olhos[i] == 'C' and cabelos[i] == 'p' or cabelos[i] == 'P':
+        cont = cont + 1
+        soma_idade = soma_idade + idade[i]
+    media_idade = soma_idade / cont
+    return media_idade
+def maior():
+    for i in range(len(idade)):
+      if i == 0:
+        maioridade = idade[i]
+      if idade[i] >= idade[i]:
+        maioridade = idade[i]
+      return maioridade
+def feminino():
+    cont = 0
+    for i in range(len(sexo)):
+      if sexo[i] == 'f' or sexo[i] == "F":
+        if (idade[i] >= 18 and idade[i] <= 35) and (olhos[i] == 'a' or olhos[i] == 'A') and (cabelos[i] == 'l' or cabelos[i] == 'L'):
+            cont = cont + 1
+        return cont
+
+def main():
+    caracteristica()
+    print("A média de idade de pessoas com cabelo preto e olho castanho é ",media(), "anos.")
+    print("A maior idade é: ", max(idade))
+    print("A quantidade de individuos do sexo feminino com idade entre 18 e 35 anos e que tem os olhos azuis e cabelos louros é de: ", feminino())
+
+main()
